@@ -45,13 +45,12 @@ class login extends CI_Controller {
 		$data['alamat'] = $this->input->post('alamat');
 
 		if ($this->user->insert($data)){
-			$this->session->set_flashdata('statusSignUp',1);
-			print $this->send_email($data['email'], base_url().'auth/verifikasi/'.$data['id_user']);
-			//redirect(base_url().'login');
+			$this->session->set_flashdata('statusSignUp',1);			
+			redirect(base_url().'login');
 		}
 		else{
 			$this->session->set_flashdata('statusSignUp',0);
-			//redirect(base_url().'login/signup');
+			redirect(base_url().'login/signup');
 		}		
 	}
 
