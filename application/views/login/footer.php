@@ -7,7 +7,7 @@
     <script type="text/javascript" src="<?php print base_url(); ?>assets/bower/assets/js/jquery.backstretch.min.js"></script>
     <script>
         // $.backstretch("<?php print base_url(); ?>assets/bower/assets/img/login-bg.jpg", {speed: 500});
-        $.backstretch("<?php print base_url(); ?>assets/image/image.jpg", {speed: 500});
+        $.backstretch("<?php print base_url(); ?>assets/image/image4.jpg", {speed: 500});
     </script>
 
 

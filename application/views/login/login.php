@@ -25,7 +25,7 @@
 		            <hr>		            		            
 		            <div class="registration">
 		                Don't have an account yet?<br/>
-		                <a class="" href="<?php print base_url(); ?>login/create_account">
+		                <a class="" href="<?php print base_url(); ?>login/signup">
 		                    Create an account
 		                </a>
 		            </div>
