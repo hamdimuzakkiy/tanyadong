@@ -5,3 +5,45 @@
 .fix-background{
 	overflow: hidden;
 }
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #999;
+}
+
+.list li.left .list-body {
+    margin-left: 60px;
+}
+
+.list li.right .list-body {
+    margin-right: 60px;
+}
+
+.list li .list-body p {
+    margin: 0;
+}
+
+.panel .slidedown .glyphicon,
+.list .glyphicon {
+    margin-right: 5px;
+}
+
+.list-panel .panel-body {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 60vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
