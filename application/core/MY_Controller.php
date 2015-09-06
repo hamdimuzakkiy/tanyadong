@@ -22,22 +22,15 @@ class MY_Controller extends CI_Controller {
 	}
 
 	protected function database_status($from, $message){
-
+		if ($from == 'signup'){
+			if ($message == 0)
+				return 'Failed';
+			else if ($message == 1){
+				return 'Failed Send Email';
+			}
+			else if ($message == 2){
+				return "Success";
+			}			
+		}
 	}
-
-	protected function sendemail($to, $id){
-
-		$this->load->library('email');
-		$this->email->from('faketanyadong@gmail.com', 'Tanyadong');	
-		$this->email->to($to);
-		 
-		$this->email->subject('Verifikasi Tanyadong');
-		$this->email->message($message);
-		 
-		
-		if($this->email->send())		
-			return true;				
-		return false;		
-	}
-
 }

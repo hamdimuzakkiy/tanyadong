@@ -33,8 +33,6 @@ class login extends CI_Controller {
 
 	public function do_signup(){
 
-		// faketanyadong@gmail.com
-		// faketanyadong123				
 		$data['nama_depan'] = $this->input->post('nama_depan');
 		$data['nama_belakang'] = $this->input->post('nama_belakang');
 		$data['username'] = $this->input->post('username');
@@ -44,13 +42,14 @@ class login extends CI_Controller {
 		$data['tanggal_lahir'] = $this->input->post('tanggal_lahir');
 		$data['alamat'] = $this->input->post('alamat');
 
-		if ($this->user->insert($data)){
-			$this->session->set_flashdata('statusSignUp',1);			
-			redirect(base_url().'login');
+		if ($this->user->insert($data)){			
+			if ($this->send_email($data['email'], base_url().'auth/verifikasi/'.$data['id_user']))
+			return $this->database_status('signup',2);
+			else			
+			return $this->database_status('signup',1);
 		}
 		else{
-			$this->session->set_flashdata('statusSignUp',0);
-			redirect(base_url().'login/signup');
+			return $this->database_status('signup',0);
 		}		
 	}
 

@@ -81,10 +81,5 @@
 	  </div>
 
     <script type="text/javascript">
-    	function checkAll(){
-    		alert(document.getElementById('nama_depan').value);
-    		if (document.getElementById('nama_depan').value == '')
-    			return false;
-    		return true;
-    	}
+    	
     </script>
