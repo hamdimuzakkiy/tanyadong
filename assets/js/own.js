@@ -37,6 +37,36 @@ function call_ajax(url, type, dataType, data, async){
     return dataReturn;
 }
 
+function check_login(){	
+	click_check_login = false;
+
+	/*if ($("#userId").val() == ''){
+		sweetAlert("Oops...", "User ID is empty !", "error");
+		click_check_login = true;
+		return false;
+	}*/
+
+	init();
+	url = base_url+'login/do_login';
+	data = $('.form-login').serialize();
+	async = false;
+	dataType = 'text';
+	type = "POST";
+
+	if (call_ajax(url, type, dataType, data, async) == 'Success'){
+		swal({   title: "Success!",   text: "Login Success !",   type: "success",   
+			   confirmButtonText: "Ok",   
+			closeOnConfirm: false }, function(){ window.location.assign(base_url+'user') });
+		// swal("Success!", "Check Your Email Now !", "success");
+		// return true;
+	}
+	else{
+		swal("Failed !", "User ID and Password Doesn't match !", "warning");
+		click_check_signup = true;
+	}
+	return false;
+}
+
 function check_signup(){	
 	click_check_signup = false;
 

@@ -29,6 +29,24 @@ class login extends CI_Controller {
 		print $id;
 	}
 
+	public function do_login(){
+
+		$data['username'] = $this->input->post('username');
+		$data['password'] = md5($this->input->post('password'));
+
+		$result = $this->user->getWhere(array('username'=>$data['username'],'password'=>$data['password']));
+
+		if (sizeof($result)==1){			
+			print $this->database_status('login',1);
+		}
+		else{
+			print $this->database_status('login',0);
+		}
+
+		return;
+
+	}
+
 	public function do_signup(){
 
 		$data['nama_depan'] = $this->input->post('nama_depan');
@@ -81,5 +99,13 @@ class login extends CI_Controller {
 				return "Success";
 			}			
 		}
+		if ($from == 'login'){
+			if ($message == 0)
+				return 'Failed';
+
+			else if ($message == 1){
+				return "Success";
+			}			
+		}	
 	}
 }
