@@ -1,3 +1,7 @@
 .form-signup{  
   max-width: 600px;
 }
+
+.fix-background{
+	overflow: hidden;
+}

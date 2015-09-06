@@ -10,12 +10,10 @@ class login extends CI_Controller {
 	}	
 		
 	public function index(){
-
 		$data['title'] = 'login';
-
 		$this->load->view('login/header',$data);
 		$this->load->view('login/login');
-		$this->load->view('login/footer');		
+		$this->load->view('login/footer');				
 	}
 
 	public function signup(){
@@ -50,7 +48,7 @@ class login extends CI_Controller {
 		}
 		else{
 			return $this->database_status('signup',0);
-		}		
+		}
 	}
 
 	protected function send_email($to, $message){
@@ -66,5 +64,18 @@ class login extends CI_Controller {
 		if($this->email->send())		
 			return true;				
 		return false;		
+	}
+
+	private function database_status($from, $message){
+		if ($from == 'signup'){
+			if ($message == 0)
+				return 'Failed';
+			else if ($message == 1){
+				return 'Failed Send Email';
+			}
+			else if ($message == 2){
+				return "Success";
+			}			
+		}
 	}
 }
