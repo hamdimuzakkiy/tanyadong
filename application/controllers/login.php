@@ -21,7 +21,7 @@ class login extends CI_Controller {
 		$data['title'] = 'sign up';
 		print $this->session->flashdata('statusSignUp');
 		$this->load->view('login/header',$data);
-		$this->load->view('login/create_account');
+		$this->load->view('login/signup');
 		$this->load->view('login/footer');		
 	}
 
@@ -40,15 +40,19 @@ class login extends CI_Controller {
 		$data['tanggal_lahir'] = $this->input->post('tanggal_lahir');
 		$data['alamat'] = $this->input->post('alamat');
 
+
+
 		if ($this->user->insert($data)){			
 			if ($this->send_email($data['email'], base_url().'auth/verifikasi/'.$data['id_user']))
-			return $this->database_status('signup',2);
+			print $this->database_status('signup',2);
 			else			
-			return $this->database_status('signup',1);
+			print $this->database_status('signup',1);
 		}
 		else{
-			return $this->database_status('signup',0);
+			print $this->database_status('signup',0);
 		}
+
+		return;
 	}
 
 	protected function send_email($to, $message){

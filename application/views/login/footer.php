@@ -10,6 +10,9 @@
         $.backstretch("<?php print base_url(); ?>assets/image/image4.jpg", {speed: 500});
     </script>
 
+    <script src="<?php print base_url(); ?>assets/bower/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php print base_url(); ?>assets/bower/sweetalert-master/dist/sweetalert.css">
+    <script src="<?php print base_url(); ?>assets/js/own.js"></script>
 
   </body>
 </html>
