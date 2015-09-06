@@ -25,6 +25,12 @@ class login extends CI_Controller {
 		$this->load->view('login/footer');		
 	}
 
+	public function logout(){
+		$this->session->unset_userdata('role');
+		redirect(base_url().'login');
+		return; 
+	}
+
 	public function verifikasi($id){
 		print $id;
 	}
@@ -38,9 +44,16 @@ class login extends CI_Controller {
 
 		if (sizeof($result)==1){			
 			print $this->database_status('login',1);
+			foreach ($result as $row) {
+				$this->session->set_userdata(array(
+                    'role' => $row->role,
+                    'id' => $row->id_user                                                                               
+            	));	
+			}	
 		}
 		else{
 			print $this->database_status('login',0);
+			$this->session->set_flashdata('statusLogin','Gagal');
 		}
 
 		return;

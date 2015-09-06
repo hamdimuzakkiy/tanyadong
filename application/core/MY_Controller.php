@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller {
         header("Expires: 0"); // Proxies.
         // end of no cache        
 
-        $this->role = $this->session->userdata('roleTanyadong'); // role for auth
+        $this->role = $this->session->userdata('role'); // role for auth
 
         if ($this->role == ''){
         	redirect(base_url().'login');
