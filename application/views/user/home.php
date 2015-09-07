@@ -7,7 +7,7 @@
             <div id="page-wrapper">
               <br>
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-md-4">
                   <select class="form-control">
                       <option>Sort By</option>
                       <option>1</option>
@@ -21,7 +21,7 @@
               </div>
               <br>
             	<div class="row">
-            		<div class="col-lg-4">
+            		<div class="col-md-4">
             		  <!-- /.panel -->
                   <div class="list-panel panel panel-default">
                       <div class="panel-heading">
@@ -109,12 +109,12 @@
                   </div>
                   <!-- /.panel .list-panel -->
             		</div>
-                <div class="col-lg-4 vertical-center">
+                <div class="col-md-4 vertical-center">
                   <button class="btn btn-success centre btn-lg btn-block">
                       <i class="fa fa-plus-circle fa-fw"></i> Ajukan Pertanyaan
                   </button>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-md-4">
                   <!-- /.panel -->
                   <div class="list-panel panel panel-default">
                       <div class="panel-heading">

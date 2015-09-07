@@ -7,7 +7,24 @@ class login extends CI_Controller {
 	{		
 		parent::__construct();
 		$this->load->model('user');
+		if ($this->uri->segment(2) == 'logout')
+		{}
+		else if($this->cek() == false)
+		{}
+		else{
+			redirect(base_url().'/user');
+			return;
+		}
 	}	
+
+	private function cek(){
+		if ($this->session->userdata('role') == ''){
+			return false;
+		}
+		else{			
+			return true;			
+		}
+	}
 		
 	public function index(){
 		$data['title'] = 'login';
