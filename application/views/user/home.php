@@ -107,56 +107,55 @@
                   <!-- /.panel .list-panel -->
             		</div>
                 <div class="col-md-4 vertical-center">
-<<<<<<< HEAD
-                  <button class="btn btn-success centre btn-lg btn-block" data-toggle="modal" href="#myModal">
-=======
                   <button class="btn btn-success centre btn-lg btn-block" data-toggle="modal" data-target="#myModal">
->>>>>>> origin/master
                       <i class="fa fa-plus-circle fa-fw"></i> Ajukan Pertanyaan
                   </button>
                 </div>
                 <!-- Modal -->
+                
                 <div class="modal fade" id="myModal" role="dialog">
                   <div class="modal-dialog">
-                  
                     <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Pertanyaan</h4>
+                    <form class="form-login" id="submit_question">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Pertanyaan</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class = "form-group">
+                            <input type="text" class="form-control" placeholder="Judul" name="judul_pertanyaan" required>
+                          </div>
+                          <div class = "form-group">
+                            <textarea class = "form-control" rows="4" placeholder="Pertanyaan" name="keterangan_pertanyaan" required></textarea>
+                          </div>
+                          <div class = "form-group">
+                            <input type="file" name="image_pertanyaan">
+                          </div>
+                          <div class = "form-group">
+                            <select class="form-control" name="">
+                                <option value=''>Tipe Penyelesaian</option>
+                                <option value='soal'>Soal</option>
+                                <option value='jawaban'>Jawaban</option>                      
+                            </select>
+                          </div>
+                          <div class = "form-group">
+                            <select class="form-control" name="topik_pertanyaan">
+                                <option value=''>Mata Pelajaran</option>
+                                <option value='IPA'>IPA</option>
+                                <option value='IPS'>IPS</option>                      
+                            </select>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="submit_question();">Submit</button>
+                        </div>
                       </div>
-                      <div class="modal-body">
-                        <div class = "form-group">
-                          <input type="text" class="form-control" placeholder="Judul" name="judul" required>
-                        </div>
-                        <div class = "form-group">
-                          <textarea class = "form-control"></textarea>
-                        </div>
-                        <div class = "form-group">
-                          <input type="file">
-                        </div>
-                        <div class = "form-group">
-                          <select class="form-control">
-                              <option>Tipe Penyelesaian</option>
-                              <option>Soal</option>
-                              <option>Jawaban</option>                      
-                          </select>
-                        </div>
-                        <div class = "form-group">
-                          <select class="form-control">
-                              <option>Mata Pelajaran</option>
-                              <option>Soal</option>
-                              <option>Jawaban</option>                      
-                          </select>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-                      </div>
-                    </div>
-                    
+                    </form>
                   </div>
                 </div>
+                
                 <div class="col-md-4">
                   <!-- /.panel -->
                   <div class="list-panel panel panel-default">
@@ -261,46 +260,6 @@
           </div>
       </footer>
       <!--footer end-->
-
-      <!-- Modal -->
-      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Ajukan Pertanyaan</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Judul</p>
-                    <input type="text" name="judul" placeholder="Judul" autocomplete="off" class="form-control placeholder-no-fix">
-                    <br><p>Pertanyaan</p>
-                    <textarea type="text" name="pertanyaan" rows="3" placeholder="Pertanyaan" autocomplete="off" class="form-control placeholder-no-fix"></textarea>
-                    <br><p>Gambar Pertanyaan (jika ada)</p>
-                    <input type="file" name="gambar_pertanyaan">
-                    <br><p>TIpe Penyelesaian.</p>
-                    <select name="tipe_penyelesaian" class="form-control placeholder-no-fix">
-                      <option value=''>-- pilih --</option>
-                      <option>Gambar</option>
-                      <option>Video Tutorial</option>
-                    </select>
-                    <br><p>Mata Pelajaran.</p>
-                    <select name="mata_pelajaran" class="form-control placeholder-no-fix">
-                      <option value=''>-- pilih --</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                    </select>
-
-                </div>
-                <div class="modal-footer">
-                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                    <button class="btn btn-theme" type="button">Submit</button>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!-- modal -->    
 
   </section>
 

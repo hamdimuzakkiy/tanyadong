@@ -12,6 +12,7 @@
     <script src="<?php print base_url(); ?>assets/bower/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
+    <script src="<?php print base_url(); ?>assets/js/own.js"></script>
     
   <script>
       //custom select box

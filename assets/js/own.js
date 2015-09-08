@@ -37,9 +37,31 @@ function call_ajax(url, type, dataType, data, async){
     return dataReturn;
 }
 
+function submit_question(){
+	click_submit_question = false;
+	init();
+	url = base_url+'user/add_question';
+	data = $('#submit_question').serialize();
+	async = false;
+	dataType = 'text';
+	type = "POST";
+
+	if (call_ajax(url, type, dataType, data, async) == 'Success'){
+		swal({   title: "Success!",   text: "Pertanyaan berhasil diajukan !",   type: "success",   
+			   confirmButtonText: "Ok",   
+			closeOnConfirm: false }, function(){ window.location.assign(base_url+'user') });
+		// swal("Success!", "Check Your Email Now !", "success");
+		// return true;
+	}
+	else{
+		swal("Failed !", "Pertanyaan gagal diajukan. Silahkan coba lagi !", "warning");
+		click_submit_question = true;
+	}
+	return false;
+}
+
 function check_login(){	
 	click_check_login = false;
-
 	init();
 	url = base_url+'login/do_login';
 	data = $('.form-login').serialize();

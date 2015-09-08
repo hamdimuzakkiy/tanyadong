@@ -32,5 +32,14 @@ class MY_Controller extends CI_Controller {
 				return "Success";
 			}			
 		}
+
+		else if($from == 'add_question'){
+			if($message==0){
+				return 'Failed';
+			}
+			else if($message == 1){
+				return 'Success';
+			}
+		}
 	}
 }
