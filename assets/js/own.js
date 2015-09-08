@@ -40,12 +40,6 @@ function call_ajax(url, type, dataType, data, async){
 function check_login(){	
 	click_check_login = false;
 
-	/*if ($("#userId").val() == ''){
-		sweetAlert("Oops...", "User ID is empty !", "error");
-		click_check_login = true;
-		return false;
-	}*/
-
 	init();
 	url = base_url+'login/do_login';
 	data = $('.form-login').serialize();

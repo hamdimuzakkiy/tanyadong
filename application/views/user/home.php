@@ -110,7 +110,7 @@
                   <!-- /.panel .list-panel -->
             		</div>
                 <div class="col-md-4 vertical-center">
-                  <button class="btn btn-success centre btn-lg btn-block">
+                  <button class="btn btn-success centre btn-lg btn-block" data-toggle="modal" href="#myModal">
                       <i class="fa fa-plus-circle fa-fw"></i> Ajukan Pertanyaan
                   </button>
                 </div>
@@ -218,6 +218,47 @@
           </div>
       </footer>
       <!--footer end-->
+
+      <!-- Modal -->
+      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Ajukan Pertanyaan</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Judul</p>
+                    <input type="text" name="judul" placeholder="Judul" autocomplete="off" class="form-control placeholder-no-fix">
+                    <br><p>Pertanyaan</p>
+                    <textarea type="text" name="pertanyaan" rows="3" placeholder="Pertanyaan" autocomplete="off" class="form-control placeholder-no-fix"></textarea>
+                    <br><p>Gambar Pertanyaan (jika ada)</p>
+                    <input type="file" name="gambar_pertanyaan">
+                    <br><p>TIpe Penyelesaian.</p>
+                    <select name="tipe_penyelesaian" class="form-control placeholder-no-fix">
+                      <option value=''>-- pilih --</option>
+                      <option>Gambar</option>
+                      <option>Video Tutorial</option>
+                    </select>
+                    <br><p>Mata Pelajaran.</p>
+                    <select name="mata_pelajaran" class="form-control placeholder-no-fix">
+                      <option value=''>-- pilih --</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                    <button class="btn btn-theme" type="button">Submit</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- modal -->    
+
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
