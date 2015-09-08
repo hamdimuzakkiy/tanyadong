@@ -10,11 +10,8 @@
                 <div class="col-md-4">
                   <select class="form-control">
                       <option>Sort By</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option>Soal</option>
+                      <option>Jawaban</option>                      
                   </select>
                   </div>
                 </div>
@@ -95,7 +92,7 @@
                           </ul>
                       </div>
                       <!-- /.panel-body -->
-                      <div class="panel-footer">
+                      <!-- <div class="panel-footer">
                           <div class="input-group">
                               <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                               <span class="input-group-btn">
@@ -104,15 +101,57 @@
                                   </button>
                               </span>
                           </div>
-                      </div>
+                      </div> -->
                       <!-- /.panel-footer -->
                   </div>
                   <!-- /.panel .list-panel -->
             		</div>
                 <div class="col-md-4 vertical-center">
-                  <button class="btn btn-success centre btn-lg btn-block">
+                  <button class="btn btn-success centre btn-lg btn-block" data-toggle="modal" data-target="#myModal">
                       <i class="fa fa-plus-circle fa-fw"></i> Ajukan Pertanyaan
                   </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pertanyaan</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class = "form-group">
+                          <input type="text" class="form-control" placeholder="Judul" name="judul" required>
+                        </div>
+                        <div class = "form-group">
+                          <textarea class = "form-control"></textarea>
+                        </div>
+                        <div class = "form-group">
+                          <input type="file">
+                        </div>
+                        <div class = "form-group">
+                          <select class="form-control">
+                              <option>Tipe Penyelesaian</option>
+                              <option>Soal</option>
+                              <option>Jawaban</option>                      
+                          </select>
+                        </div>
+                        <div class = "form-group">
+                          <select class="form-control">
+                              <option>Mata Pelajaran</option>
+                              <option>Soal</option>
+                              <option>Jawaban</option>                      
+                          </select>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                    
+                  </div>
                 </div>
                 <div class="col-md-4">
                   <!-- /.panel -->
@@ -188,7 +227,7 @@
                           </ul>
                       </div>
                       <!-- /.panel-body -->
-                      <div class="panel-footer">
+                      <!-- <div class="panel-footer">
                           <div class="input-group">
                               <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                               <span class="input-group-btn">
@@ -197,14 +236,14 @@
                                   </button>
                               </span>
                           </div>
-                      </div>
+                      </div> -->
                       <!-- /.panel-footer -->
                   </div>
                   <!-- /.panel .list-panel -->
                 </div>
             	</div>
             </div>
-		      </section><! --/wrapper -->
+		      </section>
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->

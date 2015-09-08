@@ -49,7 +49,7 @@
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme">4</span>
@@ -115,7 +115,7 @@
                                 <a href="#">See All Tasks</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <!-- settings end -->
                     <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
@@ -206,13 +206,32 @@
                   <h5 class="centered">Marcel Newman</h5>
                     
                   <li class="mt">
-                      <a href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                      <a href="<?php print base_url(); ?>user/beranda">
+                          <i class="fa fa-home"></i>
+                          <span>Home</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-user"></i>
+                          <span>Profil</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="<?php print base_url(); ?>user/profil">Edit Profil</a></li>
+                          <li><a  href="buttons.html">Ubah Password</a></li>
+                          <li><a  href="panels.html">Isi Voucher</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="<?php print base_url(); ?>user/profil">
+                          <i class="fa fa-user"></i>
+                          <span>Profil</span>
+                      </a>
+                  </li>
+
+                  <!-- <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>UI Elements</span>
@@ -236,12 +255,12 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a href="javascript:;" >
                           <i class="fa fa-book"></i>
                           <span>Extra Pages</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="blank.html">Blank Page</a></li>
                           <li><a  href="login.html">Login</a></li>
                           <li><a  href="lock_screen.html">Lock Screen</a></li>
                       </ul>
@@ -274,7 +293,7 @@
                           <li><a  href="morris.html">Morris</a></li>
                           <li><a  href="chartjs.html">Chartjs</a></li>
                       </ul>
-                  </li>
+                  </li> -->
 
               </ul>
               <!-- sidebar menu end-->
