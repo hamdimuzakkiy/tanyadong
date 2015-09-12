@@ -182,6 +182,50 @@
       		</div>
        	</div>              
   	</section>
+
+    <!-- Modal -->        
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <form class="form-login" id="submit_question">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Pertanyaan</h4>
+            </div>
+            <div class="modal-body">
+              <div class = "form-group">
+                <input type="text" class="form-control" placeholder="Judul" name="judul_pertanyaan" required>
+              </div>
+              <div class = "form-group">
+                <textarea class = "form-control" rows="4" placeholder="Pertanyaan" name="keterangan_pertanyaan" required></textarea>
+              </div>
+              <div class = "form-group">
+                <input type="file" name="image_pertanyaan">
+              </div>
+              <div class = "form-group">
+                <select class="form-control" name="">
+                    <option value=''>Tipe Penyelesaian</option>
+                    <option value='soal'>Soal</option>
+                    <option value='jawaban'>Jawaban</option>                      
+                </select>
+              </div>
+              <div class = "form-group">
+                <select class="form-control" name="topik_pertanyaan">
+                    <option value=''>Mata Pelajaran</option>
+                    <option value='IPA'>IPA</option>
+                    <option value='IPS'>IPS</option>                      
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="submit_question();">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section><!-- /MAIN CONTENT -->
 
   <!--main content end-->
