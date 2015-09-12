@@ -213,6 +213,13 @@
                   </li>
 
                   <li class="sub-menu">
+                      <a href="<?php print base_url(); ?>user/forum">
+                          <i class="fa fa-group"></i>
+                          <span>Forum</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-user"></i>
                           <span>Profil</span>

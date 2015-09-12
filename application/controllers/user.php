@@ -41,6 +41,13 @@ class user extends MY_Controller {
 		$this->load->view('user/footer');
 	}
 
+	function forum(){
+		$data['title'] = 'Forum';
+		$this->load->view('user/header',$data);
+		$this->load->view('user/forum');
+		$this->load->view('user/footer');
+	}
+
 	function add_question(){
 		//$this->load->helper('date');
 
