@@ -27,6 +27,13 @@ class user extends MY_Controller {
 		$this->load->view('user/footer');
 	}
 
+	function pembayaran(){
+		$data['title'] = 'Pembayaran';
+		$this->load->view('user/header',$data);
+		$this->load->view('user/pembayaran');
+		$this->load->view('user/footer');
+	}
+
 	function add_question(){
 		//$this->load->helper('date');
 

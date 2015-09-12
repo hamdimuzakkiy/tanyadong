@@ -224,6 +224,13 @@
                       </ul>
                   </li>
 
+                  <li class="sub-menu">
+                      <a href="<?php print base_url(); ?>user/pembayaran">
+                          <i class="fa fa-shopping-cart"></i>
+                          <span>Pembayaran</span>
+                      </a>
+                  </li>
+
                   <!-- <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
