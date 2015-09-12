@@ -231,6 +231,18 @@
                       </a>
                   </li>
 
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>Panduan</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="<?php print base_url(); ?>user/panduan">Kategori 1</a></li>
+                          <li><a  href="buttons.html">Kategori 2</a></li>
+                          <li><a  href="panels.html">Kategori 3</a></li>
+                      </ul>
+                  </li>
+
                   <!-- <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
