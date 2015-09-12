@@ -43,7 +43,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>tanyadong</b></a>
+            <a href="<?php print base_url(); ?>user/beranda" class="logo"><b>tanyadong</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -202,7 +202,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-                  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="<?php print base_url(); ?>assets/bower/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
                   <h5 class="centered">Marcel Newman</h5>
                     
                   <li class="mt">
@@ -222,13 +222,6 @@
                           <li><a  href="buttons.html">Ubah Password</a></li>
                           <li><a  href="panels.html">Isi Voucher</a></li>
                       </ul>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="<?php print base_url(); ?>user/profil">
-                          <i class="fa fa-user"></i>
-                          <span>Profil</span>
-                      </a>
                   </li>
 
                   <!-- <li class="sub-menu">
